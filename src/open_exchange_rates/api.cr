@@ -40,7 +40,7 @@ module OpenExchangeRates
     # oxr = OpenExchangeRates::API.new("API_KEY")
     # puts oxr.currencies #=> ""
     # ```
-    def currencies(prettyprint : Int32 = 0, show_experimental = 0)
+    def currencies(prettyprint = 0, show_experimental = 0)
       response = client.get("/api/currencies.json?prettyprint=#{prettyprint}&show_experimental=#{show_experimental}")
       result = JSON.parse(response.body)
     end
