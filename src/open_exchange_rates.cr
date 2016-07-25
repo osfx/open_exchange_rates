@@ -1,5 +1,8 @@
-require "./open_exchange_rates/*"
+require "./open_exchange_rates/**"
+require "http/client"
+require "json"
 
-module OpenExchangeRates
-  # TODO Put your code here
-end
+
+
+oxr = OpenExchangeRates::API.new("7aee7f9365e94e669a4aa24b1f3dfc2b")
+p oxr.latest

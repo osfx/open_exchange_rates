@@ -10,7 +10,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   open_exchange_rates:
-    github: sanata-/open_exchange_rates
+    github: osfx/open_exchange_rates
 ```
 
 
