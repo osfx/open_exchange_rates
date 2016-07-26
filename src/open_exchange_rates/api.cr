@@ -2,7 +2,7 @@ module OpenExchangeRates
   # Api class is a **OpenExchangeRates**(see the `OpenExchangeRates` module) that has been
   # described since antiquity as a beast with a large, spiraling horn projecting
   # from its forehead.
-  struct API
+  class API
     getter key
     getter uri
     getter client
@@ -12,15 +12,20 @@ module OpenExchangeRates
       @uri = URI.parse("https://openexchangerates.org")
       @client = HTTP::Client.new(@uri)
     end
+
     # Return latast rates
     #
     # ```
     # oxr = OpenExchangeRates::API.new("API_KEY")
     # puts oxr.latest #= {"AED" => 3.672852, "AFN" => 67.842051, "ALL" => 121.8915, "AMD" => 476.242503...
+    # puts oxr.latest.rates #=> Hash
+    # puts oxr.latest["EUR"]
     # ```
     def latest
       response = client.get("/api/latest.json?&app_id=#{@key}")
-      JSON.parse(response.body)["rates"]
+      # JSON.parse(response.body)["rates"]
+      result = build(response.body)
+      # Formatters::JSON.new(result, @output)
     end
     # Get historical exchange rates for any date available from the Open Exchange Rates API.
     #
@@ -78,6 +83,14 @@ module OpenExchangeRates
     def usage
       response = client.get("/api/usage.json?app_id=#{@key}")
       result = JSON.parse(response.body)
+      r = result["data"]
+      OpenExchangeRates::Mapping::Usage.from_json(response.body)
+
     end
+
+    def build(result)
+      OpenExchangeRates::Mapping::Latest.from_json(result)
+    end
+
   end
 end
