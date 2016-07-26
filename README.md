@@ -26,7 +26,8 @@ require "open_exchange_rates"
 TODO: Write usage instructions here
 
 ## Docs
-[Library Docs](http://docrystal.org/github.com/osfx/open_exchange_rates/master/index.html)
+[![docrystal.org](http://docrystal.org/badge.svg)](http://docrystal.org/github.com/osfx/open_exchange_rates)
+
 TODO: Write development instructions here
 
 ## Contributing

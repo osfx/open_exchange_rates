@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/osfx/open_exchange_rates">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>OpenExchangeRates::API - github.com/osfx/open_exchange_rates</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates" data-name="openexchangerates">
+      <a href="../OpenExchangeRates.html">OpenExchangeRates</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/API" data-name="openexchangerates::api">
+      <a href="../OpenExchangeRates/API.html">API</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> OpenExchangeRates::API
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenExchangeRates/API.html">OpenExchangeRates::API</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Api class is a <strong>OpenExchangeRates</strong>(see the <code><a href="../OpenExchangeRates.html">OpenExchangeRates</a></code> module) that has been
+described since antiquity as a beast with a large, spiraling horn projecting
+from its forehead.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L5" target="_blank">open_exchange_rates/api.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28key%3AString%29-class-method" class="signature"><strong>.new</strong>(key : String)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#client%3AHTTP%3A%3AClient-instance-method" class="signature"><strong>#client</strong> : HTTP::Client</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#convert%28value%3AInt32%7CFloat64%2Cfrom%3AString%2Cto%3AString%29-instance-method" class="signature"><strong>#convert</strong>(value : Int32 | Float64, from : String, to : String)</a>
+        
+          <div class="summary"><p>Convert any money value from one currency to another at the latest API rates.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#currencies%28prettyprint%3AInt32%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2Cshow_experimental%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-instance-method" class="signature"><strong>#currencies</strong>(prettyprint : Int32 = <span class="n">0</span>, show_experimental = <span class="n">0</span>)</a>
+        
+          <div class="summary"><p>Get a JSON list of all currency symbols available from the Open Exchange Rates API</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#historical%28data%3AString%29-instance-method" class="signature"><strong>#historical</strong>(data : String)</a>
+        
+          <div class="summary"><p>Get historical exchange rates for any date available from the Open Exchange Rates API.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key%3AString-instance-method" class="signature"><strong>#key</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#latest-instance-method" class="signature"><strong>#latest</strong></a>
+        
+          <div class="summary"><p>Return latast rates</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#time_series%28from%3AString%2Cto%3AString%2Csymbols%3AString%2Cbase%3D%3Cspanclass%3D%22s%22%3E%26quot%3BUSD%26quot%3B%3C%2Fspan%3E%29-instance-method" class="signature"><strong>#time_series</strong>(from : String, to : String, symbols : String, base = <span class="s">&quot;USD&quot;</span>)</a>
+        
+          <div class="summary"><p>Get historical exchange rates for a given time period, where available.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#uri%3AURI-instance-method" class="signature"><strong>#uri</strong> : URI</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#usage-instance-method" class="signature"><strong>#usage</strong></a>
+        
+          <div class="summary"><p>Show usage information <code></code>` oxr = OpenExchangeRates::API.new("API_KEY") puts oxr.usage #=> "" <code></code>`</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="new&#40;key:String&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(key : String)
+
+        <a class="method-permalink" href="#new%28key%3AString%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="client:HTTP::Client-instance-method">
+      <div class="signature">
+        
+        def <strong>client</strong> : HTTP::Client
+
+        <a class="method-permalink" href="#client%3AHTTP%3A%3AClient-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="convert&#40;value:Int32|Float64,from:String,to:String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>convert</strong>(value : Int32 | Float64, from : String, to : String)
+
+        <a class="method-permalink" href="#convert%28value%3AInt32%7CFloat64%2Cfrom%3AString%2Cto%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Convert any money value from one currency to another at the latest API rates.
+<a href="https://docs.openexchangerates.org/docs/convert" target="_blank"><strong>Open Exchange Rates convert docs</strong></a></p>
+
+<pre><code>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span>.<span class="k">new</span>(<span class="s">&quot;API_KEY&quot;</span>)
+result <span class="o">=</span> oxr.convert(value: <span class="n">800.23</span>, from: <span class="s">&quot;USD&quot;</span>, to: <span class="s">&quot;BTC&quot;</span>)
+puts result[<span class="s">&quot;meta&quot;</span>] <span class="c">#&#61;&gt; &quot;&#123;&quot;timestamp&quot; &#61;&gt; 1470957306, &quot;rate&quot; &#61;&gt; 0.001700835604&#125;&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="currencies&#40;prettyprint:Int32&#61;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,show_experimental&#61;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>currencies</strong>(prettyprint : Int32 = <span class="n">0</span>, show_experimental = <span class="n">0</span>)
+
+        <a class="method-permalink" href="#currencies%28prettyprint%3AInt32%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2Cshow_experimental%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get a JSON list of all currency symbols available from the Open Exchange Rates API</p>
+
+<pre><code>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;API_KEY&quot;</span>)
+puts oxr.currencies <span class="c">#&#61;&gt; &quot;&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="historical&#40;data:String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>historical</strong>(data : String)
+
+        <a class="method-permalink" href="#historical%28data%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get historical exchange rates for any date available from the Open Exchange Rates API.</p>
+
+<pre><code>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;API_KEY&quot;</span>)
+puts oxr.historical(<span class="s">&quot;2016-01-01&quot;</span>) <span class="c">#&#61;&gt;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key:String-instance-method">
+      <div class="signature">
+        
+        def <strong>key</strong> : String
+
+        <a class="method-permalink" href="#key%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="latest-instance-method">
+      <div class="signature">
+        
+        def <strong>latest</strong>
+
+        <a class="method-permalink" href="#latest-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Return latast rates</p>
+
+<pre><code>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;API_KEY&quot;</span>)
+puts oxr.latest <span class="c">#&#61; &#123;&quot;AED&quot; &#61;&gt; 3.672852, &quot;AFN&quot; &#61;&gt; 67.842051, &quot;ALL&quot; &#61;&gt; 121.8915, &quot;AMD&quot; &#61;&gt; 476.242503...</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L21" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="time_series&#40;from:String,to:String,symbols:String,base&#61;&lt;spanclass&#61;&quot;s&quot;&gt;&amp;quot;USD&amp;quot;&lt;/span&gt;&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>time_series</strong>(from : String, to : String, symbols : String, base = <span class="s">&quot;USD&quot;</span>)
+
+        <a class="method-permalink" href="#time_series%28from%3AString%2Cto%3AString%2Csymbols%3AString%2Cbase%3D%3Cspanclass%3D%22s%22%3E%26quot%3BUSD%26quot%3B%3C%2Fspan%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get historical exchange rates for a given time period, where available.</p>
+
+<p><a href="https://docs.openexchangerates.org/docs/time-series-json" target="_blank">Open Exchange Rates time-series docs</a></p>
+
+<pre><code>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;API_KEY&quot;</span>)
+puts oxr.currencies <span class="c">#&#61;&gt; &quot;&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L55" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="uri:URI-instance-method">
+      <div class="signature">
+        
+        def <strong>uri</strong> : URI
+
+        <a class="method-permalink" href="#uri%3AURI-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="usage-instance-method">
+      <div class="signature">
+        
+        def <strong>usage</strong>
+
+        <a class="method-permalink" href="#usage-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Show usage information</p>
+
+<pre><code>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;API_KEY&quot;</span>)
+puts oxr.usage <span class="c">#&#61;&gt; &quot;&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/osfx/open_exchange_rates/blob/770858e2da2636f39cce892ef612562e9d2f9a53/src/open_exchange_rates/api.cr#L78" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
