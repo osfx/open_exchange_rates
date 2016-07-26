@@ -82,10 +82,7 @@ module OpenExchangeRates
     # ```
     def usage
       response = client.get("/api/usage.json?app_id=#{@key}")
-      result = JSON.parse(response.body)
-      r = result["data"]
       OpenExchangeRates::Mapping::Usage.from_json(response.body)
-
     end
 
     def build(result)
