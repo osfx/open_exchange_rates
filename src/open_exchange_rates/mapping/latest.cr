@@ -23,6 +23,7 @@ module OpenExchangeRates
     # puts latast.rates      #=> {"AED" => 3.672754, "AFN" => 68.45,....}
     # ```
     class Latest
+      # :nodoc:
       JSON.mapping(
         disclaimer: String,
         license: String,
