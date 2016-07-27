@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/osfx/open_exchange_rates">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/doc.js"></script>
+  <title>OpenExchangeRates::Mapping::Historical - github.com/osfx/open_exchange_rates</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates" data-name="openexchangerates">
+      <a href="../../OpenExchangeRates.html">OpenExchangeRates</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/API" data-name="openexchangerates::api">
+      <a href="../../OpenExchangeRates/API.html">API</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping" data-name="openexchangerates::mapping">
+      <a href="../../OpenExchangeRates/Mapping.html">Mapping</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/DataHash" data-name="openexchangerates::mapping::datahash">
+      <a href="../../OpenExchangeRates/Mapping/DataHash.html">DataHash</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/DataUsage" data-name="openexchangerates::mapping::datausage">
+      <a href="../../OpenExchangeRates/Mapping/DataUsage.html">DataUsage</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Historical" data-name="openexchangerates::mapping::historical">
+      <a href="../../OpenExchangeRates/Mapping/Historical.html">Historical</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Latest" data-name="openexchangerates::mapping::latest">
+      <a href="../../OpenExchangeRates/Mapping/Latest.html">Latest</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Plan" data-name="openexchangerates::mapping::plan">
+      <a href="../../OpenExchangeRates/Mapping/Plan.html">Plan</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Usage" data-name="openexchangerates::mapping::usage">
+      <a href="../../OpenExchangeRates/Mapping/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> OpenExchangeRates::Mapping::Historical
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../OpenExchangeRates/Mapping/Historical.html">OpenExchangeRates::Mapping::Historical</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/osfx/open_exchange_rates/blob/f7c373712397f9afb4edd99601b4138e2ef1012d/src/open_exchange_rates/mapping/historical.cr#L6" target="_blank">open_exchange_rates/mapping/historical.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28__temp_19%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_19 : JSON::PullParser)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#rates%3AHash%28String%2CFloat64%29-instance-method" class="signature"><strong>#rates</strong> : Hash(String, Float64)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rates%3D%28_rates%3AHash%28String%2CFloat64%29%29-instance-method" class="signature"><strong>#rates=</strong>(_rates : Hash(String, Float64))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28io%3AIO%29-instance-method" class="signature"><strong>#to_json</strong>(io : IO)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="new&#40;__temp_19:JSON::PullParser&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(__temp_19 : JSON::PullParser)
+
+        <a class="method-permalink" href="#new%28__temp_19%3AJSON%3A%3APullParser%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="rates:Hash&#40;String,Float64&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>rates</strong> : Hash(String, Float64)
+
+        <a class="method-permalink" href="#rates%3AHash%28String%2CFloat64%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rates&#61;&#40;_rates:Hash&#40;String,Float64&#41;&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>rates=</strong>(_rates : Hash(String, Float64))
+
+        <a class="method-permalink" href="#rates%3D%28_rates%3AHash%28String%2CFloat64%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json&#40;io:IO&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(io : IO)
+
+        <a class="method-permalink" href="#to_json%28io%3AIO%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

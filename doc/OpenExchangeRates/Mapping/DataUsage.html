@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/osfx/open_exchange_rates">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/doc.js"></script>
+  <title>OpenExchangeRates::Mapping::DataUsage - github.com/osfx/open_exchange_rates</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates" data-name="openexchangerates">
+      <a href="../../OpenExchangeRates.html">OpenExchangeRates</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/API" data-name="openexchangerates::api">
+      <a href="../../OpenExchangeRates/API.html">API</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping" data-name="openexchangerates::mapping">
+      <a href="../../OpenExchangeRates/Mapping.html">Mapping</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/DataHash" data-name="openexchangerates::mapping::datahash">
+      <a href="../../OpenExchangeRates/Mapping/DataHash.html">DataHash</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/DataUsage" data-name="openexchangerates::mapping::datausage">
+      <a href="../../OpenExchangeRates/Mapping/DataUsage.html">DataUsage</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Historical" data-name="openexchangerates::mapping::historical">
+      <a href="../../OpenExchangeRates/Mapping/Historical.html">Historical</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Latest" data-name="openexchangerates::mapping::latest">
+      <a href="../../OpenExchangeRates/Mapping/Latest.html">Latest</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Plan" data-name="openexchangerates::mapping::plan">
+      <a href="../../OpenExchangeRates/Mapping/Plan.html">Plan</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Usage" data-name="openexchangerates::mapping::usage">
+      <a href="../../OpenExchangeRates/Mapping/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> OpenExchangeRates::Mapping::DataUsage
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../OpenExchangeRates/Mapping/DataUsage.html">OpenExchangeRates::Mapping::DataUsage</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>OpenExchangeRates::Mapping::DataUsage object</p>
+
+<pre><code>
+{
+ requests:           <span class="t">Int32</span>,
+ requests_quota:     <span class="t">Int32</span>,
+ requests_remaining: <span class="t">Int32</span>,
+ days_elapsed:       <span class="t">Int32</span>,
+ days_remaining:     <span class="t">Int32</span>,
+ daily_average:      <span class="t">Int32</span>,
+}</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/osfx/open_exchange_rates/blob/f7c373712397f9afb4edd99601b4138e2ef1012d/src/open_exchange_rates/mapping/usage.cr#L17" target="_blank">open_exchange_rates/mapping/usage.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28__temp_33%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_33 : JSON::PullParser)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#daily_average%3AInt32-instance-method" class="signature"><strong>#daily_average</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#daily_average%3D%28_daily_average%3AInt32%29-instance-method" class="signature"><strong>#daily_average=</strong>(_daily_average : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#days_elapsed%3AInt32-instance-method" class="signature"><strong>#days_elapsed</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#days_elapsed%3D%28_days_elapsed%3AInt32%29-instance-method" class="signature"><strong>#days_elapsed=</strong>(_days_elapsed : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#days_remaining%3AInt32-instance-method" class="signature"><strong>#days_remaining</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#days_remaining%3D%28_days_remaining%3AInt32%29-instance-method" class="signature"><strong>#days_remaining=</strong>(_days_remaining : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#requests%3AInt32-instance-method" class="signature"><strong>#requests</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#requests%3D%28_requests%3AInt32%29-instance-method" class="signature"><strong>#requests=</strong>(_requests : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#requests_quota%3AInt32-instance-method" class="signature"><strong>#requests_quota</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#requests_quota%3D%28_requests_quota%3AInt32%29-instance-method" class="signature"><strong>#requests_quota=</strong>(_requests_quota : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#requests_remaining%3AInt32-instance-method" class="signature"><strong>#requests_remaining</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#requests_remaining%3D%28_requests_remaining%3AInt32%29-instance-method" class="signature"><strong>#requests_remaining=</strong>(_requests_remaining : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28io%3AIO%29-instance-method" class="signature"><strong>#to_json</strong>(io : IO)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="new&#40;__temp_33:JSON::PullParser&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(__temp_33 : JSON::PullParser)
+
+        <a class="method-permalink" href="#new%28__temp_33%3AJSON%3A%3APullParser%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="daily_average:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>daily_average</strong> : Int32
+
+        <a class="method-permalink" href="#daily_average%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="daily_average&#61;&#40;_daily_average:Int32&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>daily_average=</strong>(_daily_average : Int32)
+
+        <a class="method-permalink" href="#daily_average%3D%28_daily_average%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="days_elapsed:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>days_elapsed</strong> : Int32
+
+        <a class="method-permalink" href="#days_elapsed%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="days_elapsed&#61;&#40;_days_elapsed:Int32&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>days_elapsed=</strong>(_days_elapsed : Int32)
+
+        <a class="method-permalink" href="#days_elapsed%3D%28_days_elapsed%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="days_remaining:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>days_remaining</strong> : Int32
+
+        <a class="method-permalink" href="#days_remaining%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="days_remaining&#61;&#40;_days_remaining:Int32&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>days_remaining=</strong>(_days_remaining : Int32)
+
+        <a class="method-permalink" href="#days_remaining%3D%28_days_remaining%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="requests:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>requests</strong> : Int32
+
+        <a class="method-permalink" href="#requests%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="requests&#61;&#40;_requests:Int32&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>requests=</strong>(_requests : Int32)
+
+        <a class="method-permalink" href="#requests%3D%28_requests%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="requests_quota:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>requests_quota</strong> : Int32
+
+        <a class="method-permalink" href="#requests_quota%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="requests_quota&#61;&#40;_requests_quota:Int32&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>requests_quota=</strong>(_requests_quota : Int32)
+
+        <a class="method-permalink" href="#requests_quota%3D%28_requests_quota%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="requests_remaining:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>requests_remaining</strong> : Int32
+
+        <a class="method-permalink" href="#requests_remaining%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="requests_remaining&#61;&#40;_requests_remaining:Int32&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>requests_remaining=</strong>(_requests_remaining : Int32)
+
+        <a class="method-permalink" href="#requests_remaining%3D%28_requests_remaining%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json&#40;io:IO&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(io : IO)
+
+        <a class="method-permalink" href="#to_json%28io%3AIO%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
