@@ -1,7 +1,7 @@
 name: open_exchange_rates
-version: 0.1.0
+version: 0.4.0
 
 authors:
-  - osfx <osfx42@gmail.com>
+  - Peter Boriskin <osfx42@gmail.com>
 
 license: MIT

@@ -2,23 +2,13 @@ require "json"
 
 module OpenExchangeRates
   module Mapping
-
-    class Latest
-      JSON.mapping(
-        disclaimer: String,
-        license: String,
-        timestamp: Int32,
-        base: String,
-        rates: Hash(String, Float64)
-      )
-    end
-
-
-    class Historical
-      JSON.mapping(
-        rates: Hash(String, Float64)
-      )
-    end
-
+    # abstract class Base
+    #   def initialize(@output, @response)
+    #   end
+    #
+    #   def mapper_name
+    #     self.class
+    #   end
+    # end
   end
 end
