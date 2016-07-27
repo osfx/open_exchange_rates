@@ -40,4 +40,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [osfx](https://github.com/osfx) osfx - creator, maintainer
+- [osfx](https://github.com/osfx) Peter Boriskin - creator, maintainer
