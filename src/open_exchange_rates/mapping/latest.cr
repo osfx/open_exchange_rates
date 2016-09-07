@@ -22,6 +22,7 @@ module OpenExchangeRates
     # puts latest.base       #=> "USD"
     # puts latast.rates      #=> {"AED" => 3.672754, "AFN" => 68.45,....}
     # ```
+    
     class Latest
       JSON.mapping(
         disclaimer: String,
