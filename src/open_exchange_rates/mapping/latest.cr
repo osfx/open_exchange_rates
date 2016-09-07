@@ -1,5 +1,5 @@
 require "json"
-require "json/mapping"
+require "./json/*"
 
 module OpenExchangeRates
   module Mapping
