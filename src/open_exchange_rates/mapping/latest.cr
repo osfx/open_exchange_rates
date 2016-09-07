@@ -3,7 +3,9 @@ require "./json/*"
 
 module OpenExchangeRates
   module Mapping
+    # :nodoc:
     class Latest
+      # :nodoc:
       JSON.mapping(
         disclaimer: String,
         license: String,
