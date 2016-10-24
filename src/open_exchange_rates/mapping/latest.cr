@@ -2,6 +2,7 @@ require "json"
 require "./json/*"
 
 module OpenExchangeRates
+  # :nodoc:
   module Mapping
     # :nodoc:
     class Latest

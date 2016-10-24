@@ -1,6 +1,7 @@
 require "json"
 
 module OpenExchangeRates
+  # :nodoc:
   module Mapping
     # OpenExchangeRates::Mapping::DataUsage object
     # ```
@@ -14,7 +15,9 @@ module OpenExchangeRates
     #  daily_average:      Int32,
     # }
     #```
+    # :nodoc:
     class DataUsage
+      # :nodoc:
       JSON.mapping(
         requests:           Int32,
         requests_quota:     Int32,
@@ -34,7 +37,9 @@ module OpenExchangeRates
     #   features:         Hash(String, Bool),
     # }
     # ```
+    # :nodoc:
     class Plan
+      # :nodoc:
       JSON.mapping(
         name:             String,
         quota:            String,
@@ -51,7 +56,9 @@ module OpenExchangeRates
     #   usage:  {type: DataUsage},
     # }
     # ```
+    # :nodoc:
     class DataHash
+      # :nodoc:
       JSON.mapping(
         app_id: String,
         status: String,
@@ -67,7 +74,9 @@ module OpenExchangeRates
     #   data:    DataHash,
     # }
     #```
+    # :nodoc:
     class Usage
+      # :nodoc:
       JSON.mapping(
         status: Int32,
         data:   {type: DataHash},

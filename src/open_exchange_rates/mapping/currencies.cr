@@ -1,6 +1,7 @@
 require "json"
 
 module OpenExchangeRates
+  # :nodoc:
   module Mapping
 
     # class Currencies

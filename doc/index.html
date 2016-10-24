@@ -30,41 +30,6 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping" data-name="openexchangerates::mapping">
-      <a href="OpenExchangeRates/Mapping.html">Mapping</a>
-      
-        <ul>
-  
-  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/DataHash" data-name="openexchangerates::mapping::datahash">
-      <a href="OpenExchangeRates/Mapping/DataHash.html">DataHash</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/DataUsage" data-name="openexchangerates::mapping::datausage">
-      <a href="OpenExchangeRates/Mapping/DataUsage.html">DataUsage</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Latest" data-name="openexchangerates::mapping::latest">
-      <a href="OpenExchangeRates/Mapping/Latest.html">Latest</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Plan" data-name="openexchangerates::mapping::plan">
-      <a href="OpenExchangeRates/Mapping/Plan.html">Plan</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/osfx/open_exchange_rates/OpenExchangeRates/Mapping/Usage" data-name="openexchangerates::mapping::usage">
-      <a href="OpenExchangeRates/Mapping/Usage.html">Usage</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
 </ul>
 
       
@@ -75,9 +40,9 @@
 </div>
 
 <div id="main-content">
-<h1>open_exchange_rates</h1>
+<h1>OpenExchangeRates</h1>
 
-<p>TODO: Write a description here</p>
+<p>Crystal library for <a href="https://openexchangerates.org" target="_blank">Open Exchange Rates Service</a></p>
 
 <h2>Installation</h2>
 
@@ -91,13 +56,87 @@
 
 <pre><code class='language-crystal'><span class="k">require</span> <span class="s">&quot;open_exchange_rates&quot;</span></code></pre>
 
-<p>TODO: Write usage instructions here</p>
+<h3>Latest:</h3>
+
+<p>Get the latest exchange rates available from the Open Exchange Rates API.</p>
+
+<p><strong>Exapmple:</strong></p>
+
+<pre><code class='language-crystal'>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
+puts oxr.latest       <span class="c">#&#61;&gt; return mapped object</span>
+puts oxr.latest.rates <span class="c">#&#61;&gt; &#123;&quot;AED&quot; &#61;&gt; 3.672852, &quot;AFN&quot; &#61;&gt; 67.842051, &quot;ALL&quot; &#61;&gt; 121.8915, &quot;AMD&quot; &#61;&gt; 476.242503...</span>
+puts oxr.latest[<span class="s">&quot;EUR&quot;</span>]<span class="c">#&#61;&gt; 0.8942</span>
+</code></pre>
+
+<h3>Historical:</h3>
+
+<p>Get historical exchange rates for any date available from the Open Exchange Rates API.</p>
+
+<p><strong>Exapmple:</strong></p>
+
+<pre><code class='language-crystal'>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
+puts oxr.historical(<span class="s">&quot;2016-01-01&quot;</span>) <span class="c">#&#61;&gt; &#123;&quot;AED&quot; &#61;&gt; 3.672754, &quot;AFN&quot; &#61;&gt; 68.45, &quot;ALL&quot; &#61;&gt; 125.9742, &quot;AMD&quot; &#61;&gt; 483.75, &quot;ANG&quot; &#61;&gt; 1.78875, &quot;AOA&quot; &#61;&gt; 135.256669, &quot;ARS&quot; &#61;&gt; 12.96635, &quot;AUD&quot; &#61;&gt; 1.37393, &quot;AWG&quot; &#61;&gt; 1.790083, &quot;AZN&quot; &#61;&gt; 1.562017, &quot;BAM&quot; &#61;&gt; 1.797331...&#125;</span>
+</code></pre>
+
+<h3>Currencies:</h3>
+
+<p>Get a JSON list of all currency symbols available from the Open Exchange Rates API</p>
+
+<p><strong>Exapmple:</strong></p>
+
+<pre><code class='language-crystal'>
+oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
+puts oxr.currencies <span class="c">#&#61;&gt; &quot;&#123;&quot;AED&quot; &#61;&gt; &quot;United Arab Emirates Dirham&quot;, &quot;AFN&quot; &#61;&gt; &quot;Afghan Afghani&quot;, &quot;ALL&quot; &#61;&gt; &quot;Albanian Lek&quot;, &quot;AMD&quot; &#61;&gt; &quot;Armenian Dram&quot;, &quot;ANG&quot; &#61;&gt; &quot;Netherlands Antillean Guilder&quot;, &quot;AOA&quot; &#61;&gt; &quot;Angolan Kwanza&quot;, &quot;ARS&quot; &#61;&gt; &quot;Argentine Peso&quot;...&#125;</span>
+</code></pre>
+
+<h3>Time-Series:</h3>
+
+<p>Get historical exchange rates for a given time period, where available.</p>
+
+<p><a href="https://docs.openexchangerates.org/docs/time-series-json" target="_blank"><strong>Open Exchange Rates time-series original docs</strong></a></p>
+
+<p><strong>Exapmple:</strong></p>
+
+<pre><code class='language-crystal'>
+oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
+puts oxr.time_series(<span class="s">&quot;2016-01-01&quot;</span>, <span class="s">&quot;2016-01-31&quot;</span>, <span class="s">&quot;EUR,BTC&quot;</span>)
+<span class="c">#&#61;&gt; &#123;&quot;2016-01-01&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0023245218, &quot;EUR&quot; &#61;&gt; 0.920961&#125;, &quot;2016-01-02&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.00230479, &quot;EUR&quot; &#61;&gt; 0.920862&#125;, &quot;2016-01-03&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0023312414, &quot;EUR&quot; &#61;&gt; 0.920289&#125;, &quot;2016-01-04&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0022988242, &quot;EUR&quot; &#61;&gt; 0.923285&#125;, &quot;2016-01-05&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0023133529, &quot;EUR&quot; &#61;&gt; 0.930028&#125;, &quot;2016-01-06&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.002318432, &quot;EUR&quot; &#61;&gt; 0.92771&#125;, &quot;2016-01-07&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0021923574, &quot;EUR&quot; &#61;&gt; 0.915366&#125;&#125;</span></code></pre>
+
+<h3>Convert:</h3>
+
+<p>Convert any money value from one currency to another at the latest API rates.
+<a href="https://docs.openexchangerates.org/docs/convert" target="_blank"><strong>Open Exchange Rates convert docs</strong></a></p>
+
+<p><strong>Exapmple:</strong></p>
+
+<pre><code class='language-crystal'>
+oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
+result <span class="o">=</span> oxr.convert(value: <span class="n">800.23</span>, from: <span class="s">&quot;USD&quot;</span>, to: <span class="s">&quot;BTC&quot;</span>)
+puts result[<span class="s">&quot;meta&quot;</span>] <span class="c">#&#61;&gt; &quot;&#123;&quot;timestamp&quot; &#61;&gt; 1470957306, &quot;rate&quot; &#61;&gt; 0.001700835604&#125;&quot;</span>
+</code></pre>
+
+<h3>Usage:</h3>
+
+<p>Show usage information</p>
+
+<p><strong>Exapmple:</strong></p>
+
+<pre><code class='language-crystal'>
+oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
+
+oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
+usage <span class="o">=</span> oxr.usage
+puts usage.to_json                  <span class="c">#&#61;&gt; &#123;&quot;app_id&quot;:&quot;your_awesome_app_id&quot;,&quot;status&quot;:&quot;active&quot;,&quot;plan&quot;:&#123;&quot;name&quot;:&quot;Unlimited&quot;,&quot;quota&quot;:&quot;Unlimited requests/month&quot;,&quot;update_frequency&quot;:&quot;300s&quot;,&quot;features&quot;:&#123;&quot;base&quot;:true,&quot;symbols&quot;:true,&quot;experimental&quot;:true,&quot;time-series&quot;:true,&quot;convert&quot;:true&#125;&#125;,&quot;usage&quot;:&#123;&quot;requests&quot;:275,&quot;requests_quota&quot;:-1,&quot;requests_remaining&quot;:-1,&quot;days_elapsed&quot;:14,&quot;days_remaining&quot;:17,&quot;daily_average&quot;:19&#125;&#125;</span>
+puts usage.status                   <span class="c">#&#61;&gt; &quot;active&quot;</span>
+puts usage.plan.to_json             <span class="c">#&#61;&gt; &#123;&quot;name&quot;:&quot;Unlimited&quot;,&quot;quota&quot;:&quot;Unlimited requests/month&quot;,&quot;update_frequency&quot;:&quot;300s&quot;,&quot;features&quot;:&#123;&quot;base&quot;:true,&quot;symbols&quot;:true,&quot;experimental&quot;:true,&quot;time-series&quot;:true,&quot;convert&quot;:true&#125;&#125;</span>
+puts usage.plan.name                <span class="c">#&#61;&gt; &quot;Unlimited&quot;</span>
+puts usage.plan.quota               <span class="c">#&#61;&gt; &quot;Unlimited requests/month&quot;</span>
+puts usage.plan.update_frequency    <span class="c">#&#61;&gt; &quot;300s&quot;</span>
+puts usage.plan.features            <span class="c">#&#61;&gt; &#123;&quot;base&quot; &#61;&gt; true, &quot;symbols&quot; &#61;&gt; true, &quot;experimental&quot; &#61;&gt; true, &quot;time-series&quot; &#61;&gt; true, &quot;convert&quot; &#61;&gt; true&#125;</span></code></pre>
 
 <h2>Docs</h2>
 
 <p><a href="http://docrystal.org/github.com/osfx/open_exchange_rates" target="_blank"><img src="http://docrystal.org/badge.svg" alt="docrystal.org"/></a></p>
-
-<p>TODO: Write development instructions here</p>
 
 <h2>Contributing</h2>
 
@@ -105,7 +144,7 @@
 
 <h2>Contributors</h2>
 
-<ul><li><a href="https://github.com/osfx" target="_blank">osfx</a> Peter Boriskin - creator, maintainer</li></ul>
+<ul><li><a href="https://github.com/osfx" target="_blank"> Peter Boriskin</a> - creator, maintainer</li></ul>
 </div>
 </body>
 </html>
