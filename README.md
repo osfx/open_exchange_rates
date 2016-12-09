@@ -1,6 +1,8 @@
 # OpenExchangeRates
 Crystal library for [Open Exchange Rates Service](https://openexchangerates.org)
 
+## Docs
+[![docrystal.org](http://docrystal.org/badge.svg)](http://docrystal.org/github.com/osfx/open_exchange_rates)
 
 ## Installation
 
@@ -96,8 +98,7 @@ puts usage.plan.update_frequency    #=> "300s"
 puts usage.plan.features            #=> {"base" => true, "symbols" => true, "experimental" => true, "time-series" => true, "convert" => true}
 ```
 
-## Docs
-[![docrystal.org](http://docrystal.org/badge.svg)](http://docrystal.org/github.com/osfx/open_exchange_rates)
+
 
 ## Contributing
 
