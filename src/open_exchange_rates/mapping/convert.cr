@@ -1,5 +1,5 @@
 require "json"
-
+# :nodoc:
 module OpenExchangeRates
   # :nodoc:
   module Mapping
