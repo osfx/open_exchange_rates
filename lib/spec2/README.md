@@ -65,7 +65,7 @@ Spec2.describe MySuperLibrary do
 end
 ```
 
-If you have test suite written for `Spec` and you don't want to prefix each
+If you have test suite written for `Spec` and you don"t want to prefix each
 top-level describe with `Spec2.`, you can just include `Spec::GlobalDSL`
 globally:
 
@@ -382,7 +382,7 @@ After you forked the repo:
 
 1. Fork it ( https://github.com/waterlink/spec2.cr/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
+3. Commit your changes (git commit -am "Add some feature")
 4. Push to the branch (git push origin my-new-feature)
 5. Create a new Pull Request
 

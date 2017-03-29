@@ -171,7 +171,7 @@ h1.type-name {
 }
 
 .entry-const {
-  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+  font-family: Consolas, "Courier New", Courier, Monaco, monospace;
 }
 
 .entry-summary {
@@ -280,7 +280,7 @@ pre {
 }
 
 code {
-  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+  font-family: Consolas, "Courier New", Courier, Monaco, monospace;
 }
 
 .tooltip>span {

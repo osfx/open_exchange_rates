@@ -46,15 +46,15 @@
 
 <h2>Installation</h2>
 
-<p>Add this to your application's <code>shard.yml</code>:</p>
+<p>Add this to your application"s <code>shard.yml</code>:</p>
 
-<pre><code class='language-yaml'>dependencies:
+<pre><code class="language-yaml">dependencies:
   open_exchange_rates:
     github: osfx/open_exchange_rates</code></pre>
 
 <h2>Usage</h2>
 
-<pre><code class='language-crystal'><span class="k">require</span> <span class="s">&quot;open_exchange_rates&quot;</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;open_exchange_rates&quot;</span></code></pre>
 
 <h3>Latest:</h3>
 
@@ -62,7 +62,7 @@
 
 <p><strong>Exapmple:</strong></p>
 
-<pre><code class='language-crystal'>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
+<pre><code class="language-crystal">oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
 puts oxr.latest       <span class="c">#&#61;&gt; return mapped object</span>
 puts oxr.latest.rates <span class="c">#&#61;&gt; &#123;&quot;AED&quot; &#61;&gt; 3.672852, &quot;AFN&quot; &#61;&gt; 67.842051, &quot;ALL&quot; &#61;&gt; 121.8915, &quot;AMD&quot; &#61;&gt; 476.242503...</span>
 puts oxr.latest[<span class="s">&quot;EUR&quot;</span>]<span class="c">#&#61;&gt; 0.8942</span>
@@ -74,7 +74,7 @@ puts oxr.latest[<span class="s">&quot;EUR&quot;</span>]<span class="c">#&#61;&gt
 
 <p><strong>Exapmple:</strong></p>
 
-<pre><code class='language-crystal'>oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
+<pre><code class="language-crystal">oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
 puts oxr.historical(<span class="s">&quot;2016-01-01&quot;</span>) <span class="c">#&#61;&gt; &#123;&quot;AED&quot; &#61;&gt; 3.672754, &quot;AFN&quot; &#61;&gt; 68.45, &quot;ALL&quot; &#61;&gt; 125.9742, &quot;AMD&quot; &#61;&gt; 483.75, &quot;ANG&quot; &#61;&gt; 1.78875, &quot;AOA&quot; &#61;&gt; 135.256669, &quot;ARS&quot; &#61;&gt; 12.96635, &quot;AUD&quot; &#61;&gt; 1.37393, &quot;AWG&quot; &#61;&gt; 1.790083, &quot;AZN&quot; &#61;&gt; 1.562017, &quot;BAM&quot; &#61;&gt; 1.797331...&#125;</span>
 </code></pre>
 
@@ -84,7 +84,7 @@ puts oxr.historical(<span class="s">&quot;2016-01-01&quot;</span>) <span class="
 
 <p><strong>Exapmple:</strong></p>
 
-<pre><code class='language-crystal'>
+<pre><code class="language-crystal">
 oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
 puts oxr.currencies <span class="c">#&#61;&gt; &quot;&#123;&quot;AED&quot; &#61;&gt; &quot;United Arab Emirates Dirham&quot;, &quot;AFN&quot; &#61;&gt; &quot;Afghan Afghani&quot;, &quot;ALL&quot; &#61;&gt; &quot;Albanian Lek&quot;, &quot;AMD&quot; &#61;&gt; &quot;Armenian Dram&quot;, &quot;ANG&quot; &#61;&gt; &quot;Netherlands Antillean Guilder&quot;, &quot;AOA&quot; &#61;&gt; &quot;Angolan Kwanza&quot;, &quot;ARS&quot; &#61;&gt; &quot;Argentine Peso&quot;...&#125;</span>
 </code></pre>
@@ -97,7 +97,7 @@ puts oxr.currencies <span class="c">#&#61;&gt; &quot;&#123;&quot;AED&quot; &#61;
 
 <p><strong>Exapmple:</strong></p>
 
-<pre><code class='language-crystal'>
+<pre><code class="language-crystal">
 oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
 puts oxr.time_series(<span class="s">&quot;2016-01-01&quot;</span>, <span class="s">&quot;2016-01-31&quot;</span>, <span class="s">&quot;EUR,BTC&quot;</span>)
 <span class="c">#&#61;&gt; &#123;&quot;2016-01-01&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0023245218, &quot;EUR&quot; &#61;&gt; 0.920961&#125;, &quot;2016-01-02&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.00230479, &quot;EUR&quot; &#61;&gt; 0.920862&#125;, &quot;2016-01-03&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0023312414, &quot;EUR&quot; &#61;&gt; 0.920289&#125;, &quot;2016-01-04&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0022988242, &quot;EUR&quot; &#61;&gt; 0.923285&#125;, &quot;2016-01-05&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0023133529, &quot;EUR&quot; &#61;&gt; 0.930028&#125;, &quot;2016-01-06&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.002318432, &quot;EUR&quot; &#61;&gt; 0.92771&#125;, &quot;2016-01-07&quot; &#61;&gt; &#123;&quot;BTC&quot; &#61;&gt; 0.0021923574, &quot;EUR&quot; &#61;&gt; 0.915366&#125;&#125;</span></code></pre>
@@ -109,7 +109,7 @@ puts oxr.time_series(<span class="s">&quot;2016-01-01&quot;</span>, <span class=
 
 <p><strong>Exapmple:</strong></p>
 
-<pre><code class='language-crystal'>
+<pre><code class="language-crystal">
 oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
 result <span class="o">=</span> oxr.convert(value: <span class="n">800.23</span>, from: <span class="s">&quot;USD&quot;</span>, to: <span class="s">&quot;BTC&quot;</span>)
 puts result[<span class="s">&quot;meta&quot;</span>] <span class="c">#&#61;&gt; &quot;&#123;&quot;timestamp&quot; &#61;&gt; 1470957306, &quot;rate&quot; &#61;&gt; 0.001700835604&#125;&quot;</span>
@@ -121,7 +121,7 @@ puts result[<span class="s">&quot;meta&quot;</span>] <span class="c">#&#61;&gt; 
 
 <p><strong>Exapmple:</strong></p>
 
-<pre><code class='language-crystal'>
+<pre><code class="language-crystal">
 oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
 
 oxr <span class="o">=</span> <span class="t">OpenExchangeRates</span><span class="t">::</span><span class="t">API</span>.<span class="k">new</span>(<span class="s">&quot;your_awesome_app_id&quot;</span>)
@@ -140,7 +140,7 @@ puts usage.plan.features            <span class="c">#&#61;&gt; &#123;&quot;base&
 
 <h2>Contributing</h2>
 
-<ol><li>Fork it ( https://github.com/osfx/open_exchange_rates/fork )</li><li>Create your feature branch (git checkout -b my-new-feature)</li><li>Commit your changes (git commit -am 'Add some feature')</li><li>Push to the branch (git push origin my-new-feature)</li><li>Create a new Pull Request</li></ol>
+<ol><li>Fork it ( https://github.com/osfx/open_exchange_rates/fork )</li><li>Create your feature branch (git checkout -b my-new-feature)</li><li>Commit your changes (git commit -am "Add some feature")</li><li>Push to the branch (git push origin my-new-feature)</li><li>Create a new Pull Request</li></ol>
 
 <h2>Contributors</h2>
 

@@ -12,4 +12,32 @@ describe OpenExchangeRates::API do
     response.body.should eq ""        #=> ""
     # response.status_code
   end
+
+  context "client" do
+    it "#latest show" do
+      oxr = OpenExchangeRates::API.new("your_awesome_app_id")
+      # oxr.latest.should eq ""
+      true.should eq true
+    end
+
+    it ".historical" do
+
+    end
+
+    it ".currencies" do
+
+    end
+
+    it ".time_series" do
+
+    end
+
+    it ".convert" do
+
+    end
+
+    it ".usage" do
+
+    end
+  end
 end
