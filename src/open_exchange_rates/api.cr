@@ -40,7 +40,7 @@ module OpenExchangeRates
     # oxr = OpenExchangeRates::API.new("your_awesome_app_id")
     # puts oxr.historical("2016-01-01") #=> {"AED" => 3.672754, "AFN" => 68.45, "ALL" => 125.9742, "AMD" => 483.75, "ANG" => 1.78875, "AOA" => 135.256669, "ARS" => 12.96635, "AUD" => 1.37393, "AWG" => 1.790083, "AZN" => 1.562017, "BAM" => 1.797331...}
     # ```
-    def historical(data : String)
+    def historical(data : String) : JSON::Any
       response = client.get("/api/historical/#{data}.json?app_id=#{@key}")
       result = JSON.parse(response.body)["rates"]
     end
