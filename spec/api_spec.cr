@@ -1,3 +1,5 @@
+# dadasd
+
 require "./spec_helper"
 
 describe OpenExchangeRates::API do
@@ -36,7 +38,7 @@ describe OpenExchangeRates::API do
 
     end
 
-    it ".usage" do
+    it ".convert" do
 
     end
   end
