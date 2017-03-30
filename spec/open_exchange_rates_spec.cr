@@ -13,7 +13,7 @@ describe OpenExchangeRates do
       WebMock.stub(:get, "https://openexchangerates.org/api/latest.json?&app_id=api-key").
       to_return(body: %({"disclaimer": "val", "license": "new", "timestamp": 123, "base": "base", "rates": {"string": 1.09}}))
 
-      subject.latest.to_json.should eq String
+      subject.latest.class.should eq JSON::Any
 
     end
 

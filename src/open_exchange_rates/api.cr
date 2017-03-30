@@ -28,7 +28,8 @@ module OpenExchangeRates
     # ```
     def latest
       response = client.get("/api/latest.json?&app_id=#{@key}")
-      OpenExchangeRates::Mapping::Latest.from_json(response.body)
+      # OpenExchangeRates::Mapping::Latest.from_json(response.body)
+      JSON.parse(response.body)
     end
 
     # Get historical exchange rates for any date available from the Open Exchange Rates API.
@@ -106,7 +107,8 @@ module OpenExchangeRates
     # ```
     def usage
       response = client.get("/api/usage.json?app_id=#{@key}")
-      OpenExchangeRates::Mapping::Usage.from_json(response.body).data
+      # OpenExchangeRates::Mapping::Usage.from_json(response.body).data
+      JSON.parse(response.body)["data"]
     end
   end
 end
